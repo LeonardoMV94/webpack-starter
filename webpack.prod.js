@@ -1,9 +1,8 @@
 const HtmlWebPack    = require('html-webpack-plugin')
 const MiniCssExtract = require("mini-css-extract-plugin");
 const CopyPlugin     = require("copy-webpack-plugin");
-
-const CssMinimizer = require('css-minimizer-webpack-plugin');
-const Terser = require('terser-webpack-plugin');
+const CssMinimizer   = require('css-minimizer-webpack-plugin');
+const Terser         = require('terser-webpack-plugin');
 
 module.exports = {
     mode: "production",
@@ -31,7 +30,7 @@ module.exports = {
                 use: [ MiniCssExtract.loader, 'css-loader']
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif)$/,
                 loader: 'file-loader'
             },
             {
